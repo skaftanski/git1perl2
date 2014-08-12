@@ -1,7 +1,7 @@
 git1perl2
 =========
 
-Presentation of git1perl2 for MadMongers (Madison Perl Mongers) Aug 12, 2014
+Very Brief Presentation of git1perl2 for Madison Perl Mongers, Aug 12, 2014
 
 Even when you are not able to install Modern Perl on your environment, 
   if you have git, you still have perl (albeit older) from git bash:
@@ -16,12 +16,6 @@ $ perl -v
 This is perl, v5.8.8 built for msys
 ...
 
-skaftanski@TALENDDEV ~
-$ mkdir git1perl2
-
-skaftanski@TALENDDEV ~
-$ cd git1perl2
-
 skaftanski@TALENDDEV ~/git1perl2
 $ git init
 Initialized empty Git repository in c:/Users/skaftanski/git1perl2/.git/
@@ -29,45 +23,33 @@ Initialized empty Git repository in c:/Users/skaftanski/git1perl2/.git/
 ...
 
 Grab some useful files (such as from http://search.cpan.org/~cwest/ppt-0.14/ )
+ Eg., "cal" and "strings" (which otherwise are not available from git bash)
+  and both of which work in perl 5.8.8
+
+$ git clone https://github.com/skaftanski/git1perl2
+Cloning into 'git1perl2'...
+...
+Unpacking objects: 100% (7/7), done.
+Checking connectivity... done.
 
 ...
 
-
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# Committer: Steve Kaftanski <skaftanski@talenddev.x-es.com>
-#
-# On branch master
-#
-# Initial commit
-#
-# Changes to be committed:
-#       new file:   git1perl2
-#
-# Changes not staged for commit:
-#       modified:   git1perl2 (modified content, untracked content)
-#
-# Untracked files:
-#       inlinePerlPackages/
-#
-Adding subdir git1perl2 several files from PPT-0.14 (2004):
-  cal
-  strings
- ...not otherwise available from git bash
-
-...
-
-curl -O http://search.cpan.org/CPAN/authors/id/C/CW/CWEST/ppt-0.14.tar.gz
-
-http://search.cpan.org/~cwest/ppt-0.14/
+skaftanski@TALENDDEV ~
+$ cd git1perl2
 
 
 skaftanski@TALENDDEV ~/git1perl2 (master)
-$ git clone https://github.com/daviddelikat/inlinePerlPackages/
-Cloning into 'inlinePerlPackages'...
-remote: Counting objects: 82, done.
-remote: Total 82 (delta 0), reused 0 (delta 0)
-Unpacking objects: 100% (82/82), done.
-Checking connectivity... done.
+$ perl cal
+         August 2014
+  Su   M  Tu   W  Th   F  Sa
+                       1   2
+   3   4   5   6   7   8   9
+  10  11  12  13  14  15  16
+  17  18  19  20  21  22  23
+  24  25  26  27  28  29  30
+  31
 
+...
+Perl Power Tools has not been worked on for a decade or so, but was an
+ attempt at a (pre-modern) Perl implementation of standard Unix shell tools.
+ Latest checkins appear to be circa 2004, so works pretty good in v5.8.8
